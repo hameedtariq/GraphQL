@@ -15,9 +15,9 @@ export default {
         }
         return products;
     },
-    product: (parent, {filter},context) => {
+    product: (parent, {filter,id},context) => {
         const products = context.products;
-        return products.find(product => product.id === args.id);
+        return products.find(product => product.id === id);
     },
     categories: (_,__,context) => {
         const categories = context.categories;
