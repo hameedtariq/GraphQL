@@ -1,0 +1,37 @@
+type Query {
+    cars: [Car!]!
+}
+
+type Car {
+    id: ID!
+    color: String!
+    make: String!
+}
+
+type Group {
+    id: ID!
+    features: [GroupFeature!]!
+    applyFeaturesSeparately: Boolean!
+    name: String!
+    image: Image!
+    description: String!
+    cars: [Car!]!
+}
+
+enum GroupFeatureFeilds {
+    INCLINE_ENGINE
+    FOUR_CYLINDER_ENGINE
+    TWIN_TURBO_ENGINE
+    V8_ENGINE
+    RED_PAINT
+    BLUE_PAINT
+}
+
+type Image {
+    id: ID!
+    url: String!
+}
+
+type GroupFeature {
+    feature: GroupFeatureFeilds!
+}
